@@ -1,0 +1,62 @@
+# APT Output Product
+# 
+# APT Version: Version 2021.2  JWST PRD: PRDOPSSOC-037 
+# Date: Sat Aug 21 00:46:26 GMT 2021
+
+JWST Pointing Report for JWST Approved Proposal 1068 (Unsaved)
+
+========================================
+* sub160 RAPID (Obs 1)
+** Visit 1:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  1    1   1    1 NRCB5_SUB160              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.000   +0.000  -87.081 -491.730   +0.000   +0.000 TARGET     SCIENCE        0      0  0.000 (base)
+  1    1   1    2 NRCB5_SUB160              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.221   +0.080  -87.302 -491.650   +0.221   +0.080 SUBDITHER  SCIENCE        0      0  0.235          
+  1    1   1    3 NRCB5_SUB160              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.141   +0.221  -87.222 -491.509   +0.141   +0.221 SUBDITHER  SCIENCE        0      0  0.162          
+
+========================================
+* sub320 RAPID (Obs 2)
+** Visit 2:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  1    1   1    1 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.000   +0.000  -87.081 -491.730   +0.000   +0.000 TARGET     SCIENCE        0      0  0.000 (base)
+  1    1   1    2 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.226   +0.166  -87.307 -491.564   +0.226   +0.166 SUBDITHER  SCIENCE        0      0  0.281          
+  1    1   1    3 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +8.190   +8.190  -95.274 -483.543   +8.190   +8.190 DITHER     SCIENCE        0      0 11.305          
+  1    1   1    4 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +8.416   +8.356  -95.500 -483.377   +8.416   +8.356 SUBDITHER  SCIENCE        0      0  0.281          
+  1    1   1    5 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +8.190   -8.190  -95.269 -499.923   +8.190   -8.190 DITHER     SCIENCE        0      0 16.547          
+  1    1   1    6 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +8.416   -8.024  -95.495 -499.757   +8.416   -8.024 SUBDITHER  SCIENCE        0      0  0.281          
+  1    1   1    7 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   -8.190   -8.190  -78.889 -499.918   -8.190   -8.190 DITHER     SCIENCE        0      0 16.607          
+  1    1   1    8 NRCB5_SUB320              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   -7.964   -8.024  -79.115 -499.752   -7.964   -8.024 SUBDITHER  SCIENCE        0      0  0.281          
+
+========================================
+* sub640 RAPID (Obs 3)
+** Visit 3:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  1    1   1    1 NRCB5_SUB640              1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.000   +0.000  -87.081 -491.730   +0.000   +0.000 TARGET     SCIENCE        0      0  0.000 (base)
+
+========================================
+* full (Obs 4)
+** Visit 4:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  1    1   1    1 NRCBS_FULL                1 LMC-ASTR  +80.48750  -69.49750   +0.000   +0.000   +0.000   +0.000  -82.121 -496.039   +0.000   +0.000 TARGET     SCIENCE        0      0  0.000 (base)
+
+========================================
+* sub400p (Obs 5)
+** Visit 5:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  0    0   0    0 NRCB5_TAPSIMG32           2 LMC-ASTR  +80.48254  -69.49396   +0.000   +0.000   +0.000   +0.000 -152.003 -440.340   +0.000   +0.000 TARGET     T_ACQ          0      0  0.000 (base)
+  1    1   1    1 NRCB1_SUB400P             2 LMC-ASTR  +80.48254  -69.49396   +0.000   +0.000   +0.000   +0.000 -146.051 -432.206   +0.000   +0.000 TARGET     SCIENCE        0      0 10.079          
+
+========================================
+* sub64p (Obs 6)
+** Visit 6:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  0    0   0    0 NRCB5_TAPSIMG32           2 LMC-ASTR  +80.48254  -69.49396   +0.000   +0.000   +0.000   +0.000 -152.003 -440.340   +0.000   +0.000 TARGET     T_ACQ          0      0  0.000 (base)
+  1    1   1    1 NRCB1_SUB64P              2 LMC-ASTR  +80.48254  -69.49396   +0.000   +0.000   +0.000   +0.000 -151.093 -427.403   +0.000   +0.000 TARGET     SCIENCE        0      0 12.969          
+
+========================================
+* subgrism256 (Obs 7)
+** Visit 7:1
+Tar Tile Exp Dith Aperture Name             Target       RA         Dec        BaseX    BaseY    DithX    DithY    V2       V3       IdlX     IdlY   Level      Type      ExPar  DkPar   dDist          
+  0    0   0    0 NRCA5_TAGRISMTS32         2 LMC-ASTR  +80.48254  -69.49396   +0.000   +0.000   +0.000   +0.000  +73.230 -551.540   +0.000   +0.000 TARGET     T_ACQ          0      0  0.000 (base)
+  1    1   1    1 NRCA5_GRISM256_F322W2     2 LMC-ASTR  +80.48254  -69.49396   +0.000   +1.449   +0.000   +0.000  +50.773 -555.028   +0.000   +1.449 TARGET     SCIENCE        0      0 22.726          
+
+
