@@ -59,8 +59,9 @@ from matplotlib import colors
 from matplotlib.ticker import FormatStrFormatter
 from mpl_toolkits.axes_grid1.axes_divider import make_axes_area_auto_adjustable
 
-from target_coverage_tool.utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
-from target_coverage_tool.utils.apertures import all_apertures, attitude, compute_local_roll
+#from target_coverage_tool.utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
+from utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
+from utils.apertures import all_apertures, attitude, compute_local_roll
 
 plt.style.use('http://www.stsci.edu/~dcoe/matplotlibrc.txt')
 
@@ -654,21 +655,6 @@ def define_options(parser=None, usage=None, conflict_handler='resolve'):
 if __name__ == '__main__':
     parser = define_options()
     args = parser.parse_args()
-
-# =============================================================================
-#     pointing_file = '/Users/robberto/Desktop/APT1288.pointing'
-#     observations = 1
-#     exposures = 1
-#     instrument = 'nircam'
-# 
-#     # or
-#     #exposures = {}
-#     #exposures['1'] = 1
-#     #exposures['2'] = [1, 2]
-# 
-#     t = TCT(pointing_file=pointing_file, observations=observations, exposures=exposures, instrument=instrument, output_dir='./')
-# 
-# =============================================================================
 
     t = TCT(pointing_file=args.pointing_file, observations=args.observations, exposures=args.exposures,
             instrument=args.instrument, pav3=args.pav3, siaf_file=args.siaf_file, prd_version=args.prd_version,
