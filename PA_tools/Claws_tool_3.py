@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 import os as os
 
 
-def Claws_tool_3(APT_nr,RA, Dec):
+def Claws_tool_3(APT_nr, RA, Dec): 
     cwd = os.getcwd()
 # 1) read claws table and set the limits; V2V3 are spherical coordinates
     Shape_file = cwd+'/PA_tools/Claws_table.txt'
@@ -204,17 +204,17 @@ def Claws_tool_3(APT_nr,RA, Dec):
         plot_yoffset = Center_field_V3_arcsec/3600 
         plt.rcParams["figure.figsize"] = (10, 10)
         plt.xlim(-3, 3)
-        plt.ylim(-3+plot_yoffset, 3+plot_yoffset)
+        plt.ylim(-3+plot_yoffset, 3+plot_yoffset) 
         plt.plot(corners_Arev_deg_LocalFrame.data.lon.value*180/np.pi,
                  corners_Arev_deg_LocalFrame.data.lat.value*180/np.pi + plot_yoffset)
         plt.plot(corners_Brev_deg_LocalFrame.data.lon.value*180/np.pi,
                  corners_Brev_deg_LocalFrame.data.lat.value*180/np.pi + plot_yoffset)
-        plt.title("APT+str(APT_nr)+' Target "+radec_0, fontsize=20)
+        plt.title("APT" + str(APT_nr)+" Target "+c1.to_string('hmsdms'), fontsize=20)
         plt.text(-2.8, 2.6+plot_yoffset, "Bright star at   " +
-                 c2[i].to_string('hmsdms'), fontsize=16)
+                c2[i].to_string('hmsdms'), fontsize=16)
         plt.text(-2.8, 2.3+plot_yoffset, "K mag = "+str(Kmag[i]), fontsize=16)
         plt.xlabel("-V2 (degrees)", fontsize=14)
-        plt.ylabel("V3 (degrees))", fontsize=14)
+        plt.ylabel("V3 (degrees)", fontsize=14)
 
     #    print(i)
     # DETAILED EDGE OF THE REGION
@@ -260,12 +260,12 @@ def Claws_tool_3(APT_nr,RA, Dec):
 
             # CHECK IF THE POINT IS INSIDE THE A REGION
             isin_A.append(polygon_A.contains(point))
-            print(j, x, y, polygon_A.contains(point),
-                  r*180/np.pi, theta.deg+PA.degree[i])
+#            print(j, x, y, polygon_A.contains(point),
+#                  r*180/np.pi, theta.deg+PA.degree[i])
 
             # CHECK IF THE POINT IS INSIDE THE B REGION
             isin_B.append(polygon_B.contains(point))
-            print('B', x, y, polygon_B.contains(point), theta.deg+PA.degree[i])
+#            print('B', x, y, polygon_B.contains(point), theta.deg+PA.degree[i])
 
             # TRACK THE EDGES
             if (isin_A[j] == True) or (isin_B[j] == True):
@@ -289,12 +289,19 @@ def Claws_tool_3(APT_nr,RA, Dec):
             txt = "avoid from: {:6.2f}deg to {:6.2f}deg".format(
                 angle_to_avoid[ia]+PA.degree[i], angle_to_avoid[ia+1]+PA.degree[i])
             plt.text(-2.8, 8.5-ia*0.12, txt, fontsize=18)
-
+           
+        fig = plt.gcf()  #grab the plot as fig
+        #plt.show()       #plot the plot, loosing it.... 
+        #plt.clf()        #cleanup
+        
+        #outuput to file
         cwd = os.getcwd()
         output_dir = cwd+"/plots"
         isExist = os.path.exists(output_dir)
         if not isExist:
             os.makedirs(output_dir)
-        plt.savefig(output_dir+'/APT'+str(APT_nr)+' Target = '+c1.to_string('hmsdms') +
-                    '- Birght star = '+c2[i].to_string('hmsdms')+'.jpg')
-        plt.show()
+        fig.savefig(output_dir+'/APT'+str(APT_nr)+' Target = '+c1.to_string('hmsdms') +
+                    '- Bright star = '+c2[i].to_string('hmsdms')+'.jpg')
+        fig.clf()
+    print('Done')        
+           

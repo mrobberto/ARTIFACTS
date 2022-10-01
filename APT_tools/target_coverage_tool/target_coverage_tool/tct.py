@@ -59,9 +59,8 @@ from matplotlib import colors
 from matplotlib.ticker import FormatStrFormatter
 from mpl_toolkits.axes_grid1.axes_divider import make_axes_area_auto_adjustable
 
-#from target_coverage_tool.utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
-from utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
-from utils.apertures import all_apertures, attitude, compute_local_roll
+from APT_tools.target_coverage_tool.target_coverage_tool.utils.constants import CODES_ONE_SCA, REFERENCE_APERTURES, SUPPORTED_INSTRUMENTS
+from APT_tools.target_coverage_tool.target_coverage_tool.utils.apertures import all_apertures, attitude, compute_local_roll
 
 plt.style.use('http://www.stsci.edu/~dcoe/matplotlibrc.txt')
 
@@ -157,7 +156,7 @@ class TCT():
         self.output_dir = os.path.abspath(output_dir)
 
         # Create the map
-        self.exposure_map()
+        ###self.exposure_map()
 
 
     def exposure_map(self):
@@ -580,6 +579,7 @@ class TCT():
 
         obs = None
         vis = None
+        print('enter')
         with open(self.pointing_file) as fp:
             for line in fp:
                 if line[:13] == '* Observation':
@@ -588,18 +588,18 @@ class TCT():
                     obs = line.split('Obs')[-1].strip()[:-1]
                 if line[:8] == '** Visit':
                     vis = line.strip().split(':')[1]
-                if (obs in self.observations) and (vis is not None) and (line[-7:-1] == '(base)'):
+                if ((vis is not None) and (line[18:21] == 'NRC') and (line[-7:-1] == '(base)')):
+                    print(vis,line[18:21],line[-7:-1])
+#                if (obs in self.observations) and (vis is not None) and (line[-7:-1] == '(base)'):
                     if (line[:3] != 'Tar') & (len(line) > 100):
                         _list = line.split()
                         if _list[-1] == '(base)':
                             _list = _list[:-1]
                         df.loc[(obs, vis, _list[0], _list[1], _list[2], _list[3]), :] = _list[4:]
                 # Extract the pointing of the selected prime instrument
-        pointing_instrument_RA =   df.RA[0]
-        pointing_instrument_Dec =  df.Dec[0]
-        print(pointing_instrument_RA,pointing_instrument_Dec)
+        print(df.RA, df.Dec)
                 
-        return [pointing_instrument_RA, pointing_instrument_Dec]
+        return [df.RA, df.Dec]
 
     def targ_aperture_siafs(self, pointing_info):
         """Create a Siaf aperture instance for each target/aperture combination
