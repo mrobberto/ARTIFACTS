@@ -275,7 +275,7 @@ def Claws_tool_3(APT_nr, RA, Dec):
     #        print(counter)
             if counter[-1] != counter_last:
                 edge_rad = (theta+theta_last)/2.
-                print("edge found at PA",  edge_rad.degree)
+                print("edge found at PA",  edge_rad.degree+PA.degree[i])
                 angle_to_avoid.append(edge_rad.degree)
                 up = -up
                 plt.text(xy_deg_LocalFrame.lon.value-0.3, plot_yoffset+1+up,

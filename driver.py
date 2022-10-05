@@ -18,8 +18,8 @@ from APT_tools.target_coverage_tool.target_coverage_tool.tct import TCT
 from PA_tools import Claws_tool_3 as Claws
 import sys, getopt
 
-APT_nr = sys.argv[1]    # comment to debug
-#APT_nr = 1258#2756#1288      # uncomment to debug
+#APT_nr = sys.argv[1]    # comment to debug
+APT_nr = 2756#1258##1288      # uncomment to debug
 
 print('running APT nr.',APT_nr,'\n')
 pointing_file = './APT_pointing_files/APT'+str(APT_nr)+'.pointing'
